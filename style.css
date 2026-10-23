@@ -1,0 +1,1250 @@
+/* =========================================================
+   CRE MINISTRIES
+   CHRIST ROYAL EAGLES MINISTRIES
+   Premium Royal Blue + Gold Church Website
+========================================================= */
+
+:root {
+    --navy: #05082b;
+    --navy-2: #080d3b;
+    --blue: #101b72;
+    --blue-light: #1c2c91;
+    --gold: #d9a62e;
+    --gold-light: #f3cc63;
+    --white: #ffffff;
+    --off-white: #f7f7f5;
+    --text: #1a1b24;
+    --muted: #6e707c;
+    --border: rgba(217, 166, 46, 0.25);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+    --container: 1180px;
+    --radius: 4px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(92%, var(--container));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 110px 0;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Cinzel", serif;
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+}
+
+h2 span {
+    color: var(--gold);
+}
+
+.gold-small {
+    color: var(--gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.section-label span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-size: 0.65rem;
+}
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    margin: 18px 0;
+}
+
+.section-heading > p:last-child {
+    max-width: 650px;
+    color: var(--muted);
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered > p:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(4, 7, 36, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: white;
+}
+
+.brand img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-text strong {
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+}
+
+.brand-text span {
+    color: var(--gold-light);
+    font-size: 0.58rem;
+    letter-spacing: 0.17em;
+    margin-top: 3px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.main-nav a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold-light);
+}
+
+.main-nav a:not(.nav-give)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.nav-give {
+    padding: 12px 20px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light) !important;
+}
+
+.nav-give:hover {
+    background: var(--gold);
+    color: var(--navy) !important;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: white;
+    margin: 5px auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 45%, rgba(28, 44, 145, 0.75), transparent 38%),
+        linear-gradient(135deg, #030625, #090f4d 55%, #030625);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 5, 30, 0.96),
+            rgba(7, 12, 60, 0.72),
+            rgba(3, 5, 30, 0.96)
+        );
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.25) 55%,
+            rgba(0, 0, 0, 0.6) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}
+
+.hero-logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatLogo 5s ease-in-out infinite;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 35px rgba(0,0,0,0.45));
+}
+
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.hero-eyebrow {
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 7.2rem);
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--gold-light);
+}
+
+.hero-vision {
+    margin: 25px auto 10px;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1rem, 2vw, 1.45rem);
+    color: white;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 15px auto 30px;
+    color: rgba(255,255,255,0.72);
+    font-size: 0.95rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    transition: 0.3s ease;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(217,166,46,0.25);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+.btn-dark {
+    background: var(--navy);
+    color: white;
+}
+
+.btn-dark:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+}
+
+.scroll-line {
+    width: 45px;
+    height: 1px;
+    background: var(--gold);
+}
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome {
+    background: var(--off-white);
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 80px;
+}
+
+.welcome-content h2 {
+    margin-bottom: 25px;
+}
+
+.welcome-content p:not(.gold-small) {
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+    color: var(--navy);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+.text-link span {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+.text-link:hover {
+    color: var(--gold);
+}
+
+/* =========================================================
+   VISION
+========================================================= */
+
+.vision-section {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center, #192b9a, #060a38 65%);
+}
+
+.vision-section::before {
+    content: "CRE";
+    position: absolute;
+    font-family: "Cinzel", serif;
+    font-size: 30rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.025);
+    line-height: 1;
+}
+
+.vision-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4,7,39,0.45),
+            transparent,
+            rgba(4,7,39,0.45)
+        );
+}
+
+.vision-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.eagle-symbol {
+    color: var(--gold);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.vision-content h2 {
+    font-size: clamp(2.4rem, 6vw, 5.2rem);
+}
+
+.vision-content h2 span {
+    display: block;
+}
+
+.vision-content > p:last-child {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: rgba(255,255,255,0.7);
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-preview {
+    background: white;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #ddd;
+}
+
+.service-card {
+    position: relative;
+    padding: 38px 28px;
+    background: white;
+    min-height: 330px;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.service-card.featured {
+    background: var(--navy);
+    color: white;
+}
+
+.service-number {
+    color: var(--gold);
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.service-day {
+    color: var(--gold);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.service-card h3 {
+    margin: 14px 0;
+    font-size: 1.35rem;
+}
+
+.service-time {
+    font-family: "Cinzel", serif;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.service-card.featured p {
+    color: rgba(255,255,255,0.65);
+}
+
+/* =========================================================
+   FOUNDERS
+========================================================= */
+
+.founders {
+    background: var(--off-white);
+}
+
+.founder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.founder-card {
+    background: white;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+}
+
+.founder-image {
+    height: 430px;
+    background:
+        linear-gradient(
+            135deg,
+            #070b3a,
+            #1b2b8e
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-image span {
+    font-family: "Cinzel", serif;
+    color: var(--gold);
+    font-size: 5rem;
+    opacity: 0.8;
+}
+
+.founder-info {
+    padding: 32px;
+}
+
+.founder-info .role {
+    color: var(--gold);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+}
+
+.founder-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.founder-info > p:last-child {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.center-button {
+    text-align: center;
+    margin-top: 45px;
+}
+
+/* =========================================================
+   MINISTRIES
+========================================================= */
+
+.ministries-preview {
+    background: white;
+}
+
+.ministry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.ministry-item {
+    min-height: 220px;
+    padding: 30px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s ease;
+}
+
+.ministry-item:hover {
+    background: var(--navy);
+    color: white;
+}
+
+.ministry-item span {
+    color: var(--gold);
+    font-family: "Cinzel", serif;
+}
+
+.ministry-item h3 {
+    font-size: 1.25rem;
+}
+
+/* =========================================================
+   SERMON CTA
+========================================================= */
+
+.sermon-cta {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            #05082b,
+            #111d70,
+            #05082b
+        );
+    color: white;
+    overflow: hidden;
+}
+
+.sermon-cta::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(217,166,46,0.2);
+    border-radius: 50%;
+    right: -200px;
+    top: -100px;
+}
+
+.sermon-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 50%, rgba(217,166,46,0.12), transparent 35%);
+}
+
+.sermon-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.sermon-content h2 {
+    margin-bottom: 20px;
+}
+
+.sermon-content > p:not(.gold-small) {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 30px;
+}
+
+/* =========================================================
+   VISIT
+========================================================= */
+
+.visit {
+    background: var(--off-white);
+}
+
+.visit-box {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.visit-box h2 {
+    margin-bottom: 20px;
+}
+
+.visit-box > div:first-child > p:not(.gold-small) {
+    color: var(--muted);
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0 30px;
+    border-left: 2px solid var(--gold);
+    padding-left: 20px;
+}
+
+.address span,
+.address strong {
+    margin-bottom: 3px;
+}
+
+.address strong {
+    font-family: "Cinzel", serif;
+}
+
+.contact-card {
+    background: var(--navy);
+    color: white;
+    padding: 45px 35px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 1.4rem;
+}
+
+.contact-card p {
+    color: var(--gold);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+
+.contact-card a {
+    display: block;
+    color: white;
+    font-family: "Cinzel", serif;
+    font-size: 1.45rem;
+    margin-bottom: 8px;
+}
+
+.contact-card span {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.75rem;
+}
+
+/* =========================================================
+   FACEBOOK
+========================================================= */
+
+.facebook-section {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 75px 0;
+}
+
+.facebook-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.facebook-inner .gold-small {
+    color: var(--navy);
+}
+
+.facebook-inner h2 {
+    font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.facebook-inner p:not(.gold-small) {
+    max-width: 600px;
+    margin-top: 15px;
+    opacity: 0.75;
+}
+
+.facebook-inner .btn-outline {
+    border-color: var(--navy);
+    color: var(--navy);
+    white-space: nowrap;
+}
+
+.facebook-inner .btn-outline:hover {
+    background: var(--navy);
+    color: white;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: #03051f;
+    color: white;
+    padding-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 70px;
+    padding-bottom: 65px;
+}
+
+.footer-brand img {
+    width: 95px;
+    margin-bottom: 20px;
+}
+
+.footer-brand h3 {
+    font-size: 1.05rem;
+    margin-bottom: 5px;
+}
+
+.footer-brand > p {
+    color: var(--gold);
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+}
+
+.footer-brand > span {
+    display: block;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.75rem;
+    max-width: 300px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-links h4 {
+    color: var(--gold);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-links span {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.75rem;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 22px 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom span {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.62rem;
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 999;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.whatsapp-button span {
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 0.6rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ministry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .site-header {
+        padding: 14px 0;
+    }
+
+    .brand img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-text strong {
+        font-size: 0.78rem;
+    }
+
+    .brand-text span {
+        font-size: 0.48rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(4, 7, 36, 0.98);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 16px 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        font-size: 0.68rem;
+    }
+
+    .main-nav a:not(.nav-give)::after {
+        display: none;
+    }
+
+    .nav-give {
+        margin: 15px 20px;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero-content {
+        padding-top: 90px;
+    }
+
+    .hero-logo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 0.2em;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.5rem, 14vw, 4.2rem);
+    }
+
+    .hero-description {
+        font-size: 0.82rem;
+        max-width: 92%;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .vision-section {
+        min-height: 550px;
+    }
+
+    .vision-section::before {
+        font-size: 13rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: auto;
+    }
+
+    .founder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image {
+        height: 350px;
+    }
+
+    .ministry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ministry-item {
+        min-height: 160px;
+    }
+
+    .visit-box {
+        grid-template-columns: 1fr;
+    }
+
+    .facebook-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+    }
+}
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: min(90%, 1180px);
+    }
+
+    .brand-text {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.65rem;
+    }
+
+    .hero-vision {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .founder-image {
+        height: 280px;
+    }
+
+    .contact-card {
+        padding: 35px 20px;
+    }
+
+    .whatsapp-button {
+        width: 52px;
+        height: 52px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--gold);
+    color: var(--navy);
+}
